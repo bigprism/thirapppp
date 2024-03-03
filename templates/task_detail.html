@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Task Detail</h1>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong>Description:</strong> {{ task.description }}
+            </li>
+            <li class="list-group-item">
+                <strong>Status:</strong> {{ task.status }}
+            </li>
+        </ul>
+    </div>
+{% endblock %}

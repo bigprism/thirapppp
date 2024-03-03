@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Create Task</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select class="form-control" id="status" name="status">
+                    <option value="new">New</option>
+                    <option value="in progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+{% endblock %}
